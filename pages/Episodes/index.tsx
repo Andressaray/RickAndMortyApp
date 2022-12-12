@@ -7,11 +7,12 @@ const Episodes = () => {
   const { episodes, pages, loading } = useEpisodes({ page });
   return (
     <div>
+      <title>Episodes</title>
       <Navbar />
       {loading ? (
         <SkeletonEpisodes />
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-4">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-4">
           {episodes.map((episode) => (
             <div
               className="flex justify-between p-3 bg-[#444] rounded-md"
@@ -21,7 +22,7 @@ const Episodes = () => {
               <p className="text-white">{episode.air_date}</p>
             </div>
           ))}
-        </div>
+        </section>
       )}
       <Pagination totalPages={pages} page={page} setPage={setPage} />
     </div>

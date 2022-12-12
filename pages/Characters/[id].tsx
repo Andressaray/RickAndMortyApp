@@ -16,11 +16,12 @@ const Character = () => {
 
   return (
     <div className="w-full">
+      <title>Character</title>
       <Navbar />
       {loading ? (
         <SkeletonCharacter />
       ) : (
-        <div className="flex flex-col items-center">
+        <section className="flex flex-col items-center">
           <div className="mx-2 flex flex-col items-center justify-center p-4 rounded-lg mb-5  shadow-md shadow-[#87CD53] bg-[#333] w-full sm:w-1/2  sm:flex-row">
             <Image
               src={character[0].image}
@@ -57,7 +58,7 @@ const Character = () => {
               ))}
             </div>
           </div>
-        </div>
+        </section>
       )}
     </div>
   );

@@ -23,8 +23,9 @@ const Home = () => {
 
   return (
     <div>
+      <title>Characters</title>
       <Navbar />
-      <div className="flex flex-col justify-center items-center">
+      <section className="flex flex-col justify-center items-center">
         <Image
           src={"/rickAndMorty.png"}
           height={400}
@@ -34,7 +35,7 @@ const Home = () => {
         <Search text={name} setText={handleChangeName} />
         <ListCharacters characters={characters} loading={loading} />
         <Pagination page={page} setPage={setPage} totalPages={pages} />
-      </div>
+      </section>
     </div>
   );
 };
